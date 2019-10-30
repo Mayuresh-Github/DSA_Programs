@@ -14,6 +14,7 @@ void Intersection(int n, int p, int* crick, int* bad, int* inter);
 void Union(int n, int p, int* crick, int* bad, int* uni);
 void Onlybad(int n, int p, int* crick, int* bad, int* uni);
 void Onlycrick(int n, int p, int* crick, int* bad, int* uni);
+void Neither(int n, int p, int* crick, int* bad, int* uni, int a);
 
 /* Main Funtion */
 int main()
@@ -66,7 +67,7 @@ int main()
 				break;
 
 			case 5:
-				return 1;
+				Neither(n,p, crick, bad, uni, a);
 				break;
 
 			case 6:
@@ -190,5 +191,41 @@ void Onlycrick(int n, int p, int* crick, int* bad, int* uni)
 	{
 		cout << " " << uni[j];
 	}
+}
+
+void Neither(int n, int p, int* crick, int* bad, int* uni, int a)
+{
+	int z, i, j, k = 0, flg;
+
+	for (i = 0;i < n;i++)
+	{
+		uni[k] = crick[i];
+		k++;
+	}
+
+	for (j = 0;j < p;j++)
+	{
+		flg = 0;
+		for (i = 0;i < n;i++)
+		{
+			if (crick[i] == bad[j])
+			{
+				flg = 1;
+				break;
+			}
+
+		}
+
+		if (flg == 0)
+		{
+			uni[k] = bad[j];
+			k++;
+
+		}
+	}
+
+	cout << "\n Number of students playing neither of the sport: ";
+	z = a - k;
+	cout << z;
 }
 /* End of Body of Funtions */
