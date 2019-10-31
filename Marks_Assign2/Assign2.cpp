@@ -1,5 +1,5 @@
 /* Created By : Mayuresh Mitkari */
-/* Purpose : DSA LAB ASSIGNMENT 1 */
+/* Purpose : DSA LAB ASSIGNMENT 2 */
 /* Created on : 30 OCT 2019 */
 /* Language : C++ */
 
