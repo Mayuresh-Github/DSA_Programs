@@ -85,7 +85,7 @@ public:
 			f = -1;
 			r = -1;
 
-			cout << "\n The element is deleted!" << endl;
+			cout << "\n Element Deleted" << endl;
 			return;
 		}
 
